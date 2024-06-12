@@ -1,0 +1,164 @@
+*,html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color:aliceblue;
+    transition: all ease-in 200ms;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+}
+.history{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.score > p,.history > p{
+    font-size: larger;
+    font-weight: bolder;
+    font-style: italic;
+}
+.score{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.choose{
+    background: transparent;
+    box-shadow: 2px 2px 2px 1px rgb(37, 207, 250),inset 1px 2px 2px 2px rgb(252, 9, 179);
+    border: solid;
+    border-color: transparent;
+    outline: none;
+    border-radius: 12px;
+    height: 120px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.choose button{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    outline: none;
+}
+.choose button i{
+    font-size:26pt;
+    color: rgb(14, 15, 15);
+    opacity: .6;
+}
+.choose button:hover{
+    border-radius: 30px;
+    border: solid;
+    outline: none;
+    border-color: transparent;
+    box-shadow:inset 2px 2px 2px 1px rgb(252, 9, 179), 0px 2px 0px 2px rgb(37, 207, 250);
+    transition: all ease-in 200ms;
+
+}
+.choose > button:hover~.choose>i{
+    font-size: 32pt;
+    opacity: 1;
+    transition: all ease-in 200ms;
+}
+.outPut{
+    height: 120px;
+    width: 400px;
+    background: transparent;
+    box-shadow: 2px 2px 2px 1px rgb(37, 207, 250),inset 1px 2px 2px 2px rgb(252, 9, 179);
+    border: solid;
+    border-radius: 12px;
+    border-color: transparent;
+    outline: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.outPut div button{
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: default;
+    pointer-events: none;
+}
+.outPut div button i{
+    font-size: 30pt;
+}
+#gameOutcome{
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    border-radius: 12px;
+    background: rgb(255, 255, 255,.9);
+    padding: 20px;
+    text-align:center;
+    font-size:x-large;
+    font-weight: bolder;
+    /* visibility: hidden; */
+}
+#startSession{
+    position: absolute;
+    top: 20px;
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    color: aliceblue;
+    font-weight: bold;
+    background-color: blue;
+    border: none;
+    outline: none;
+}
+#gameOutCome{
+    position: absolute;
+    height: 280px;
+    width: 450px;
+    padding-top: 20px;
+    background: rgb(255, 255, 255,.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 2px 2px #999;
+    z-index: 10;
+    border-style: none;
+    border-radius: 12px;
+    text-align: center;
+    visibility:hidden;
+}
+#gameOutCome h1{
+    background-color: transparent;
+    font-size: 40pt;
+    visibility: inherit;
+}
+#gameOutCome p{
+    background-color: transparent;
+    font-size: 20pt;
+    margin-top: 25px;
+    visibility: inherit;
+}
+#gameOutCome button{
+    height: 50px;
+    width: 190px;
+    outline: none;
+    border: none;
+    background:blue;
+    opacity: .7;
+    color:aliceblue;
+    border-radius: 12px;
+    font-size: large;
+    font-weight: 100;
+    margin-top: 25px;
+    visibility: inherit;
+}
+#gameOutCome button:hover{
+    opacity: 1;
+    scale: 1;
+    box-shadow: 1px 2px 3px 1px #999;
+    transition: all ease-in 200ms;
+    visibility: inherit;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6fb7e94352.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div id="gameOutCome">
+        <h1 class="gameOver">
+            GAME OVER
+        </h1>
+        <p id="gameOutComeInfo">YOU lOOSE</p>
+        <button id="close">CLOSE</button>
+    </div>
+    <button id="startSession">
+        START
+    </button>
+    <div class="score">
+        <p id="yourScore">Your score : {0.0} / {5.0}</p>
+        <p id="engineScore">Engine Score : {0.0} / {5.0}</p>
+    </div>
+    <div class="history">
+        <p id="score">Highest Offset:{00}</p>
+    </div>
+    <div class="choose">
+        <button id="rock" onclick="itemSelection('ro')">
+            <i class="fa-solid fa-hand-fist"></i>
+        </button>
+        <button id="paper" onclick="itemSelection('pa')">
+            <i class="fa-regular fa-note-sticky"></i>
+        </button>
+        <button id="scissors" onclick="itemSelection('sc')">
+            <i class="fa-solid fa-scissors"></i>
+        </button>
+    </div>
+    <div class="outPut">
+        <div id="yourSelection"></div>
+        <div id="engineSelectin"></div>
+        <p id="gameOutcome">Game over <br> Engine Wins</p>
+    </div>
+</body>
+</html>
