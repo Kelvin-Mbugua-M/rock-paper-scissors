@@ -12,7 +12,7 @@ let gameOver=document.getElementById('gameOutCome');
 let gameOverClose = document.getElementById('close');
 let resultStatement = document.getElementById('gameOutComeInfo')
 let sessionCount=0;
-let checkerEngine,hisScore,updateScore,checkerUser,sessionOn = false,initial=0,userScoreCounter=0,EngineScoreCounter=0,hide = 2500;
+let checkerEngine,hisScore,updateScore,checkerUser,errCheck=console.log('error is here'),sessionOn = false,initial=0,userScoreCounter=0,EngineScoreCounter=0,hide = 2500;
 
 
 engineScore.innerHTML=`The computer score : ${EngineScoreCounter} of 20`;
@@ -147,9 +147,8 @@ function stopSession(){
     userScoreCounter=0;
     if(sessionCount>=15){ 
         sessionEnd()
-        // return sessionOn= false
+        return sessionOn= false
     }
-    else return null
 }
 function keepScore(){
     if(EngineScoreCounter>=10.5){
@@ -178,19 +177,19 @@ function keepScore(){
         // setTimeout(stopSession,1500)
         return hide=5500
     }
-    else return null
+    else return 
 }
 
-function updateHistoryScore(){
-    try{
-        updateScore=localStorage.getItem('hisScore');
-        historyScore=JSON.parse(updateScore);
-    }
-    catch(e){
+// function updateHistoryScore(){
+//     try{
+//         updateScore=localStorage.getItem('hisScore');
+//         historyScore=JSON.parse(updateScore);
+//     }
+//     catch(e){
     
-       updateScore = localStorage.setItem('highScore',1);
-    }
-}
+//        updateScore = localStorage.setItem('highScore',1);
+//     }
+// }
 document.addEventListener('keypress',function(e){
     if(e.key==' '||e.key=='enter'){
         if(sessionOn==false){
@@ -199,25 +198,25 @@ document.addEventListener('keypress',function(e){
         else if (sessionOn==true){
             sessionEnd()
         }
-        else return null
+        else return errCheck
     }
     if(e.key=="r"){
         if(sessionOn==true){
             itemSelection('ro')
         }
-        else return null
+        else return errCheck
     }
     if(e.key=="p"){
         if(sessionOn==true){
             itemSelection('pa')
         }
-        else return null
+        else return errCheck
     }
     if(e.key=="s"){
         if(sessionOn==true){
             itemSelection('sc')
         }
-        else return null
+        else return errCheck
     }
 })
 
